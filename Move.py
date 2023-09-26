@@ -55,7 +55,7 @@ class FileMovementHandler(FileSystemEventHandler):
 
                     print("diretorio existe....")
                     print("moonwalkando" + file_name +"....")
-                    shutil.move(path1,path3)
+                    shutil.move(path1, path3)
                     time.sleep(1)
 
                 else:
@@ -66,13 +66,13 @@ class FileMovementHandler(FileSystemEventHandler):
                     time.sleep(1)
 
 # Inicialize a Classe Gerenciadora de Eventos
-event_handler - FileMovementHandler()
+event_handler = FileMovementHandler()
 
 # Inicialize o Observer
-observer=Observer()
+observer = Observer()
 
 # Agende o Observer
-observer.schedule(event_handler, from_dir,recursive=True)
+observer.schedule(event_handler, from_dir, recursive=True)
 #: defina o valor do parâmetro recursive (recursivo) como True para observar as alterações em todos ossubdiretórios do caminho fornecido.
 
 
